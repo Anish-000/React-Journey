@@ -1,17 +1,19 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ClassProps from './ClassProps';
-import FunctionProps from './FunctionProps';
+import React from 'react';
+import NewComp from './Components/NewComp';
 
 class App extends React.Component {
+  styles = {
+    fontStyle : "bold",
+    color : "blue"
+  };
+
   render(){
     return (
-      <div>
-        <ClassProps name = " Anish " place = " Chakdaha "><p>Child Comp</p></ClassProps>
-        <ClassProps name = "Shrestha" place = " Kalyani "><button> Click Me </button></ClassProps>
-        <ClassProps name = "Ani" place = " Chakdaha "/>
-        <FunctionProps name = "ABCD" place = " Kolkata "/>
+      <div className='App'>
+        <h1 style={this.styles}> Welcome </h1>
+        <NewComp />
       </div>
     );
   }
